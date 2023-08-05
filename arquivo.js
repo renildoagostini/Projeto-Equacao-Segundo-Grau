@@ -21,13 +21,13 @@ function calcularRaizes() {
         inValorA.focus();
         return;
     } else
-        if (valorB == "" || isNaN(valorB)) {
+        if (isNaN(valorB)) {
             alert("informe o valor B corretamente");
             inValorB.value = "";
             inValorB.focus();
             return;
         } else
-            if (valorC == "" || isNaN(valorC)) {
+            if (isNaN(valorC)) {
                 alert("informe o valor C corretamente");
                 inValorC.value = "";
                 inValorC.focus();
@@ -38,9 +38,8 @@ function calcularRaizes() {
 
     //calculo das raize
     if (delta > 0) {
-        var x1 = (-valorB + Math.sqrt(delta)) / 2 * valorA;
-        var x2 = (-valorB - Math.sqrt(delta)) / 2 * valorA;
- 
+        var x1 = (-valorB + Math.sqrt(delta)) / (2 * valorA);
+        var x2 = (-valorB - Math.sqrt(delta)) / (2 * valorA);
         outRaizes.textContent = `Delta = ${delta}\nX1 = ${x1}\nX2 = ${x2}`;
     } else
 
